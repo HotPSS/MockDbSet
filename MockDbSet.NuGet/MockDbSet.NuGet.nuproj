@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>216285d3-9204-4a71-a2c3-ed82e62827f9</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NuProjPath Condition=" '$(NuProjPath)' == '' ">$(MSBuildExtensionsPath)\NuProj\</NuProjPath>
+  </PropertyGroup>
+  <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
+  <PropertyGroup Label="Configuration">
+    <Id>MockDbSet</Id>
+    <Title>MockDbSet</Title>
+    <Authors>Marcel Veldhuizen</Authors>
+    <Owners>Marcel Veldhuizen</Owners>
+    <Summary>Fake DbSet for automated testing of Entity Framework dependent code</Summary>
+    <Description>An implementation of DbSet&lt;T&gt; that uses an in memory data source, to facilitate testing of Entity Framework dependent code. Unlike some other libraries, it doesn't just implement IDbSet&lt;T&gt;, which could mean more code changes have to be done. For example, IDbSet&lt;T&gt; </Description>
+    <ReleaseNotes>
+    </ReleaseNotes>
+    <ProjectUrl>https://github.com/Thorarin/MockDbSet</ProjectUrl>
+    <LicenseUrl>https://github.com/Thorarin/MockDbSet/blob/master/LICENSE</LicenseUrl>
+    <Copyright>Copyright © Marcel Veldhuizen</Copyright>
+    <Tags>EF DbSet</Tags>
+    <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
+    <GenerateSymbolPackage>true</GenerateSymbolPackage>
+    <Version>0.9.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MockDbSet\MockDbSet.csproj" />
+  </ItemGroup>
+  <Import Project="$(NuProjPath)\NuProj.targets" />
+</Project>

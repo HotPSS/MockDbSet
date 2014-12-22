@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockDbSet", "MockDbSet\MockDbSet.csproj", "{036E3D7B-F843-4ABE-9029-978969E48F49}"
+EndProject
+Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "MockDbSet.NuGet", "MockDbSet.NuGet\MockDbSet.NuGet.nuproj", "{216285D3-9204-4A71-A2C3-ED82E62827F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockDbSet.Tests", "MockDbSet.Tests\MockDbSet.Tests.csproj", "{9AA6D129-ED16-4F1B-87FB-5DE46C7B05E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{036E3D7B-F843-4ABE-9029-978969E48F49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{036E3D7B-F843-4ABE-9029-978969E48F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{036E3D7B-F843-4ABE-9029-978969E48F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{036E3D7B-F843-4ABE-9029-978969E48F49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{216285D3-9204-4A71-A2C3-ED82E62827F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{216285D3-9204-4A71-A2C3-ED82E62827F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{216285D3-9204-4A71-A2C3-ED82E62827F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{216285D3-9204-4A71-A2C3-ED82E62827F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AA6D129-ED16-4F1B-87FB-5DE46C7B05E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AA6D129-ED16-4F1B-87FB-5DE46C7B05E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AA6D129-ED16-4F1B-87FB-5DE46C7B05E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AA6D129-ED16-4F1B-87FB-5DE46C7B05E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
