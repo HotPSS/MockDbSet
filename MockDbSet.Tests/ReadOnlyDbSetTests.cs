@@ -8,20 +8,20 @@ using NUnit.Framework;
 namespace MockDbSet.Tests
 {
     [TestFixture]
-    public class InMemoryDbSetTests : MockDbSetBaseTests
+    public class ReadOnlyDbSetTests : MockDbSetBaseTests
     {
         [Test]
         public void Count()
         {
             var data = new List<Person> { new Person() }; 
-            var sut = new InMemoryDbSet<Person>(data.AsQueryable());
+            var sut = new ReadOnlyDbSet<Person>(data.AsQueryable());
 
             Assert.That(sut.Count(), Is.EqualTo(1));
         }
 
         public override MockDbSetBase<TEntity> CreateSut<TEntity>(List<TEntity> data, Action<string, IEnumerable> include = null)
         {
-            return new InMemoryDbSet<TEntity>(data.AsQueryable(), include);
+            return new ReadOnlyDbSet<TEntity>(data.AsQueryable(), include);
         }
     }
 }

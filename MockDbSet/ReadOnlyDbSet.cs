@@ -9,22 +9,24 @@ namespace MockDbSet
 {
     /// <summary>
     /// Replacement for <see cref="DbSet{TEntity}" /> to facilitate testing of Entity Framework dependent code.
+    /// Only querying is supported. If adding or removing is required, use <see cref="FakeDbSet{TEntity}" /> instead.
     /// </summary>
     /// <typeparam name="TEntity">The type that defines the set.</typeparam>
-    public class InMemoryDbSet<TEntity> : MockDbSetBase<TEntity> where TEntity: class
+    public class ReadOnlyDbSet<TEntity> : MockDbSetBase<TEntity> where TEntity: class
     {
         /// <summary>
-        /// Creates an instance of a <see cref="InMemoryDbSet{TEntity}" />.
+        /// Creates an instance of a <see cref="ReadOnlyDbSet{TEntity}" />.
         /// </summary>
         /// <param name="queryable">Source of data.</param>
         /// <param name="include"></param>
-        public InMemoryDbSet(IQueryable<TEntity> queryable, Action<string, IEnumerable> include = null) : base(queryable, include)
+        public ReadOnlyDbSet(IQueryable<TEntity> queryable, Action<string, IEnumerable> include = null) : base(queryable, include)
         {
         }
 
-        public override DbSet<TEntity> CreateChildSet(IQueryable<TEntity> queryable)
+        /// <inheritdoc />
+        protected override DbSet<TEntity> CreateChildSet(IQueryable<TEntity> queryable)
         {
-            return new InMemoryDbSet<TEntity>(queryable);
+            return new ReadOnlyDbSet<TEntity>(queryable);
         }
     }
 }
