@@ -4,7 +4,7 @@ using NUnit.Framework.Constraints;
 
 namespace MockDbSet.Tests.Helpers
 {
-    public class Intersects : CollectionConstraint
+    internal class Intersects : CollectionConstraint
     {
         private readonly IEnumerable _otherCollection;
 
@@ -13,7 +13,7 @@ namespace MockDbSet.Tests.Helpers
             _otherCollection = otherCollection;
         }
 
-        public static Intersects With(IEnumerable arg)
+        public new static Intersects With(IEnumerable arg)
         {
             return new Intersects(arg);
         }

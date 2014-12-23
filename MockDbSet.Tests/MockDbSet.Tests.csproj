@@ -56,7 +56,7 @@
     <Compile Include="Address.cs" />
     <Compile Include="FakeDbSetTests.cs" />
     <Compile Include="Helpers\Intersects.cs" />
-    <Compile Include="InMemoryDbSetTests.cs" />
+    <Compile Include="ReadOnlyDbSetTests.cs" />
     <Compile Include="MockDbSetBaseTests.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

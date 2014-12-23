@@ -51,7 +51,7 @@
     <Compile Include="InMemoryAsyncQueryable.cs" />
     <Compile Include="InMemoryAsyncQueryProvider.cs" />
     <Compile Include="InMemoryDbAsyncEnumerator.cs" />
-    <Compile Include="InMemoryDbSet.cs" />
+    <Compile Include="ReadOnlyDbSet.cs" />
     <Compile Include="MockDbSetBase.cs" />
     <Compile Include="MockDbSetExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

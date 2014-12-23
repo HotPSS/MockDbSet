@@ -17,7 +17,7 @@ namespace MockDbSet
         private readonly IQueryable<TEntity> _queryable;
 
         /// <summary>
-        /// Creates an instance of a <see cref="InMemoryDbSet{TEntity}" />.
+        /// Creates an instance of a <see cref="ReadOnlyDbSet{TEntity}" />.
         /// </summary>
         /// <param name="queryable">Source of data.</param>
         /// <param name="include"></param>
@@ -62,6 +62,10 @@ namespace MockDbSet
             return ((IDbAsyncEnumerable<TEntity>)_queryable).GetAsyncEnumerator();
         }
 
-        public abstract DbSet<TEntity> CreateChildSet(IQueryable<TEntity> queryable);
+        /// <summary>
+        /// Creates a new instance of the type. Used internally for some queries.
+        /// </summary>
+        /// <param name="queryable">Source of data.</param>
+        protected abstract DbSet<TEntity> CreateChildSet(IQueryable<TEntity> queryable);
     }
 }
